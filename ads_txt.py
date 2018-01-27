@@ -1,6 +1,19 @@
+#!/usr/bin/evn python
+
 import requests
 import time
 import os
+
+# get a domain from the user
+
+# check if the ads.txt file exists
+
+# if exists get the content and store in a list of format
+# partner, id, [DIRECT | RESELLER], (ID)
+# # are used for comments
+# store comments at top of file as notes
+# store end of line comments as notes for that particular patner
+# ignore all other comments
 
 url_dest = input("Enter a url (domain.com) to check for ads.txt: ")
 sep = os.linesep + "*" * 79
@@ -8,6 +21,7 @@ sep = os.linesep + "*" * 79
 print("Checking %s for ads.txt" % url_dest)
 t_start = time.time()
 
+# attempt to find the ads.txt file on the remote server; exit if not found
 try:
     requests.get("http://" + url_dest + "/ads.txt")
 
